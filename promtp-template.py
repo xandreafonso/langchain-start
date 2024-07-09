@@ -20,7 +20,6 @@ prompt_template = ChatPromptTemplate.from_messages(
 )
 
 response = prompt_template.invoke({"language": "italian", "text": "hi"})
-
 print("Exibindo o template de duas formas.")
 print("Forma 1:")
 print(response)

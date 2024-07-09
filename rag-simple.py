@@ -4,7 +4,7 @@ import os
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_core.runnables import RunnableLambda, RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 
 os.environ["OPENAI_API_KEY"] = get_env("OPENAI_API_KEY")
