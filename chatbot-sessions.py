@@ -21,7 +21,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 with_message_history = RunnableWithMessageHistory(model, get_session_history)
 
-config = {"configurable": {"session_id": "abc2"}}
+config = {"configurable": {"session_id": "abc2a"}}
 
 message = HumanMessage(content="Hi! I'm Bob")
 response = with_message_history.invoke([message], config=config)
@@ -31,5 +31,9 @@ message = HumanMessage(content="What's my name?")
 response = with_message_history.invoke([message], config=config)
 print("Human:", message.content, "AI: ", response.content)
 
+config = {"configurable": {"session_id": "abc2bb"}}
 
+message = HumanMessage(content="What's my name?")
+response = with_message_history.invoke([message], config=config)
+print("Human:", message.content, "AI: ", response.content)
 
